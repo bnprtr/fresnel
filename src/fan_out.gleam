@@ -2,7 +2,6 @@
 //// Subjects can be dynamically subscribed or unsubscribed from the publisher.
 
 import gleam/erlang/process.{type Subject}
-import gleam/io
 import gleam/list
 import gleam/otp/actor
 
