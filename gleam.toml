@@ -1,7 +1,7 @@
 name = "fresnel"
 version = "0.1.0"
 licenses = ["Apache-2.0"]
-description = "Utilities to make your actors shine ✨🎭"
+description = "✨ Make your actors shine 🎭"
 repository = { type = "github", user = "bnprtr", repo = "fresnel" }
 
 [dependencies]

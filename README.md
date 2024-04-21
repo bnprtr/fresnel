@@ -3,6 +3,16 @@
 [![Package Version](https://img.shields.io/hexpm/v/thespian)](https://hex.pm/packages/thespian)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/thespian/)
 
+✨ Make your actors shine 🎭
+
+fresnel is a library to help in working with the OTP framework and actors in gleam. The current supported
+features include:
+
+- Round Robin load balancer actor for distributing messages across multiple actor targets
+- Fan Out Pub/Sub actor for distributing messages across all subscribed actors
+
+## Usage
+
 ```sh
 gleam add fresnel
 ```
