@@ -1,20 +1,61 @@
-# thespian
+# fresnel
 
 [![Package Version](https://img.shields.io/hexpm/v/thespian)](https://hex.pm/packages/thespian)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/thespian/)
 
 ```sh
-gleam add thespian
+gleam add fresnel
 ```
 ```gleam
-import thespian
+import fresnel/fan_out
+import gleam/otp/actor
+import gleam/erlang/process
+import gleam/io
+
+type Event {
+  Lights
+  Camera
+  Action
+}
+
+fn subscriber(event: Event, id: String) -> actor.Next(Event, String) {
+  case event {
+    Lights -> {
+      io.println(id<>": lights")
+      actor.continue(id)
+    }
+    Camera -> {
+      io.println(id<>": camera")
+      actor.continue(id)
+    }
+    Action -> {
+      io.println(id<>": action!")
+      actor.continue(id)
+    }
+  }
+}
 
 pub fn main() {
-  // TODO: An example of the project in use
+  let assert Ok(publisher) = actor.start([], fan_out.handler)  
+  let assert Ok(listener1) = actor.start("1", subscriber)
+  let assert Ok(listener2) = actor.start("2", subscriber)
+  process.send(publisher, Lights)
+  process.send(publisher, Camera)
+  process.send(publisher, Action)
 }
 ```
 
-Further documentation can be found at <https://hexdocs.pm/thespian>.
+outputs:
+```
+1: lights
+2: lights
+1: camera
+2: camera
+1: action!
+2: action!
+```
+
+Further documentation can be found at <https://hexdocs.pm/fresnel>.
 
 ## Development
 
