@@ -2,7 +2,6 @@
 //// Subjects can be dynamically registered and unregistered
 
 import gleam/erlang/process.{type Subject}
-import gleam/io
 import gleam/list
 import gleam/otp/actor
 
