@@ -1,8 +1,9 @@
 name = "fresnel"
 version = "0.1.0"
 licenses = ["Apache-2.0"]
-description = "✨ Make your actors shine 🎭"
+description = "Make your actors shine"
 repository = { type = "github", user = "bnprtr", repo = "fresnel" }
+gleam = ">= 0.32.0"
 
 [dependencies]
 gleam_stdlib = ">= 0.34.0 and < 2.0.0"

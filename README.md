@@ -1,7 +1,7 @@
 # fresnel
 
-[![Package Version](https://img.shields.io/hexpm/v/thespian)](https://hex.pm/packages/thespian)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/thespian/)
+[![Package Version](https://img.shields.io/hexpm/v/fresnel)](https://hex.pm/packages/fresnel)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/fresnel/)
 
 ✨ Make your actors shine 🎭
 
