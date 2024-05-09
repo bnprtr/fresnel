@@ -1,5 +1,5 @@
 name = "fresnel"
-version = "0.1.0"
+version = "0.1.1"
 licenses = ["Apache-2.0"]
 description = "Make your actors shine"
 repository = { type = "github", user = "bnprtr", repo = "fresnel" }
