@@ -1,10 +1,10 @@
-import fan_out
+import fresnel/fan_out
+import fresnel/roundrobin
 import gleam/erlang/process.{type Subject}
 import gleam/list
 import gleam/otp/actor
 import gleeunit
 import gleeunit/should
-import roundrobin
 
 pub fn main() {
   gleeunit.main()
